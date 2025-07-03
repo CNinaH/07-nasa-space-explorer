@@ -48,11 +48,11 @@ function showGallery(apodArray) {
     if (apod.media_type === 'image') {
       const item = document.createElement('div');
       item.className = 'gallery-item';
+      // Only show image, title, and date in the gallery
       item.innerHTML = `
         <img src="${apod.url}" alt="${apod.title}" class="apod-img">
         <h3>${apod.title}</h3>
         <p><strong>Date:</strong> ${apod.date}</p>
-        <p>${apod.explanation}</p>
       `;
       // Add click event to open modal with image details
       item.addEventListener('click', function() {
@@ -124,7 +124,7 @@ function openModal(apod) {
     }
   });
 
-  // Modal content
+  // Modal content: show image, title, date, and explanation in the modal
   modalContent.innerHTML = `
     <img src="${apod.url}" alt="${apod.title}" style="width:100%;max-height:400px;object-fit:contain;border-radius:4px;">
     <h2 style="margin-top:20px;">${apod.title}</h2>
