@@ -66,7 +66,7 @@ function showGallery(apodArray) {
     gallery.innerHTML = `
       <div class="placeholder">
         <div class="placeholder-icon">🚫</div>
-        <p>No images found for this date range.</p>
+        <p>No images found for this date range. Please try again.</p>
       </div>
     `;
   }
